@@ -7,10 +7,12 @@
 
 @section('content')
       <h1>All Jobs</h1>
+    @each(job in jobs)
       <div class="job-container">
             <div class="job-info">
-                  <h3>Job Title</h3>
-                  <p>Future job description can go here</p>
+                  <h3><a href="{{ job.link }}">{{ job.title }}</a></h3>
+                  <p>{{ job.description }}</p>
             </div>
       </div>
+    @endeach
 @endsection
